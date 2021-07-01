@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Browser Form</title>
+
+</head>
+
+<body>
+    <form novalidate>
+        <p>
+          <label for="mail">
+            <span>Email address:</span>
+            <input type="email" id="mail" name="mail" required minlength="8">
+            <span class="error" aria-live="polite"></span>
+          </label>
+          
+          <label for="country">
+              <span>Country:</span>
+              <input type="text" id="country" name="country" required>
+              <span class="error" aria-live="polite"></span>          
+          </label>
+
+          <label for="zip">
+              <span>Zip Code:</span>
+              <input type="text" id="zip" name="zip" required minlength="5" maxlength="5" pattern="[0-9]*">
+              <span class="error" aria-live="polite"></span>   
+          </label>
+
+          <label for="password">
+              <span>Password:</span>
+              <input type="password" id="password" name="password" required minlength="12">
+              <span class="error" aria-live="polite"></span>   
+          </label>
+
+          <label for="passwordConfirm">
+            <span>Confirm Password:</span>
+            <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+            <span class="error" aria-live="polite"></span>    
+        </label>
+        
+        </p>
+        <button id="submitButton">Submit</button>
+        <div id="submitText"></div>
+      </form>
+
+      <div id="highfive"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
